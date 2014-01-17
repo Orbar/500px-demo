@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content" >
+		
+	   	
+	<ViewFlipper 
+		android:id="@+id/my_account_flipper"
+		android:layout_width="fill_parent"
+		android:layout_height="60dp"
+		android:layout_alignParentTop="true"
+		 >
+	         
+		<!--  The child Views/Layout to flip -->
+	     
+		<!--  Layout 1 for 1st Screen -->
+
+		<RelativeLayout
+	       	android:id="@+id/my_account_login"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center"
+	        android:orientation="vertical" >
+	
+	        <TextView
+               	android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+		        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+		        android:paddingLeft="16dp"
+		        android:paddingRight="16dp"
+		        android:text="@string/my_account"
+		        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+		        android:textColor="#fff" />
+              
+	        <ImageView
+		        android:id="@+id/account_header_login"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_centerVertical="true"
+		        android:layout_marginRight="8dp"
+		        android:src="@drawable/ic_login" />
+		
+		    <View
+		        android:layout_width="1dp"
+		        android:layout_height="match_parent"
+		        android:layout_marginBottom="6dp"
+		        android:layout_marginRight="8dp"
+		        android:layout_marginTop="6dp"
+		        android:layout_toLeftOf="@id/account_header_login"
+		        android:background="@color/WHITE" />
+		    
+		</RelativeLayout>
+		
+		<!--  Layout 2 for 2nd Screen -->
+		   
+		<RelativeLayout 
+			android:layout_width="match_parent"
+			android:layout_height="60dp" >
+		            
+		    <ImageView
+		        android:id="@+id/account_header_background"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:scaleType="centerCrop" />
+		     
+		    <ImageView
+		        android:id="@+id/account_header_shadow"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:scaleType="centerCrop"
+		        android:src="@drawable/image_shadow" />
+		    
+			<com.orbar.pxdemo.CustomViews.CircularImageView
+			    android:id="@+id/account_header_user_icon"
+			    android:layout_width="48dp"
+			    android:layout_height="48dp"
+			    android:layout_alignParentBottom="true"
+			    android:layout_alignParentLeft="true"
+			    android:layout_margin="4dp"
+			    android:src="@drawable/ic_user" />
+		           
+			<TextView
+		        android:id="@+id/account_header_user_name"
+		        android:layout_width="wrap_content"
+		        android:layout_height="48dp"
+		        android:layout_alignParentTop="true"
+		        android:layout_marginLeft="8dp"
+		        android:layout_toRightOf="@+id/account_header_user_icon"
+		        android:gravity="center_vertical"
+		        style="@style/AccountHeaderOverlayText"
+		        android:textAppearance="?android:attr/textAppearanceLarge" />
+		
+		    <ImageButton
+		        android:id="@+id/account_header_logout"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_centerVertical="true"
+		        android:layout_marginRight="8dp"
+		        android:background="?android:attr/selectableItemBackground"
+		        android:src="@drawable/ic_logout" />
+		
+		    <View
+		        android:layout_width="1dp"
+		        android:layout_height="match_parent"
+		        android:layout_marginBottom="6dp"
+		        android:layout_marginRight="8dp"
+		        android:layout_marginTop="6dp"
+		        android:layout_toLeftOf="@id/account_header_logout"
+		        android:background="@color/WHITE" />
+			  
+		</RelativeLayout>
+	</ViewFlipper>
+</RelativeLayout>

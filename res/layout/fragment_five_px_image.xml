@@ -1,0 +1,126 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BLACK"
+    tools:context=".FivePXImageFragment" >
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false" >
+
+        <ImageView
+	        android:id="@+id/image"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:adjustViewBounds="true"
+	        android:scaleType="fitCenter"
+	        android:src="@drawable/ic_launcher" />
+
+    
+        <RelativeLayout
+		        android:id="@+id/hidden_panel"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:clickable="true"
+		        android:layout_alignParentBottom="true" >
+		
+		    <RelativeLayout
+		        android:id="@+id/image_controls"
+		        android:layout_width="match_parent"
+		        android:layout_height="48dp"
+		        android:background="@color/BLACK"
+    		    android:layout_alignParentTop="true" >
+		
+		        <ImageButton
+		            android:id="@+id/image_stats"
+		            android:layout_width="38dp"
+		            android:layout_height="32dp"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginLeft="8dp"
+		            android:adjustViewBounds="true"
+		            android:background="?android:attr/selectableItemBackground"
+		            android:scaleType="fitCenter"
+		            android:src="@drawable/ic_image_details" />
+		
+		        <Button
+		            android:id="@+id/image_comments"
+		            style="android:borderlessButtonStyle"
+		            android:layout_width="wrap_content"
+		            android:layout_height="32dp"
+		            android:layout_centerVertical="true"
+		            android:layout_marginLeft="8dp"
+		            android:layout_toRightOf="@+id/image_stats"
+		            android:background="@drawable/ic_background"
+		            android:drawableLeft="@drawable/ic_comments"
+		             />
+		        
+		        <Button
+		            android:id="@+id/image_favorites"
+		            style="android:borderlessButtonStyle"
+		            android:layout_width="wrap_content"
+		            android:layout_height="32dp"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="8dp"
+		            android:adjustViewBounds="true"
+		            android:background="@drawable/ic_background"
+		            android:drawableLeft="@drawable/ic_favorites"
+		             />
+		
+		        <Button
+		            android:id="@+id/image_likes"
+		            style="android:borderlessButtonStyle"
+		            android:layout_width="wrap_content"
+		            android:layout_height="32dp"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="8dp"
+		            android:layout_toLeftOf="@+id/image_favorites"
+		            android:background="@drawable/ic_background"
+		            android:drawableLeft="@drawable/ic_likes"
+		             />
+		        
+		    </RelativeLayout>
+
+		    <ViewFlipper android:id="@+id/image_details_flipper"
+		        android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_below="@id/image_controls" >
+		        
+		        <RelativeLayout
+			        android:id="@+id/image_details"
+			        android:layout_width="match_parent"
+			        android:layout_height="match_parent"
+			        android:background="@color/BLACK"
+	    	         >
+					
+		            <include
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+				        layout="@layout/image_advanced_details" />
+		            
+				</RelativeLayout>
+
+		       
+		        
+		        <RelativeLayout
+			        android:id="@+id/image_comment_list"
+			        android:layout_width="match_parent"
+			        android:layout_height="match_parent"
+			        android:background="@color/BLACK"
+	    	         >
+			
+			        <include
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+				        layout="@layout/image_comment_list" />
+					    
+		        </RelativeLayout>
+		        
+		    </ViewFlipper>
+		</RelativeLayout>	    
+	</com.sothree.slidinguppanel.SlidingUpPanelLayout>
+</RelativeLayout>

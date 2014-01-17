@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/image_details_scrollView"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content" >
+
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+        	 >
+         
+         <RelativeLayout
+             android:id="@+id/image_details_ratings"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginBottom="8dp" >
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:baselineAligned="false" >
+
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="match_parent"
+                     android:layout_weight="1"
+                     android:orientation="vertical" >
+
+                     <TextView
+                         android:id="@+id/rating_title"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center_horizontal"
+                         android:text="@string/image_details_rating_title" />
+                     
+                     <TextView
+                         android:id="@+id/rating"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center_horizontal"
+                         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="match_parent"
+                     android:layout_weight="1"
+                     android:orientation="vertical" >
+                     
+                      <TextView
+                          android:id="@+id/highest_rating_title"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="center_horizontal"
+                          android:text="@string/image_details_highest_rating_title" />
+
+                     <TextView
+                         android:id="@+id/highest_rating"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center_horizontal"
+                         android:textAppearance="?android:attr/textAppearanceLarge" />
+                     
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="match_parent"
+                     android:layout_weight="1"
+                     android:orientation="vertical" >
+                     
+                     <TextView
+                         android:id="@+id/views_title"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center_horizontal"
+                         android:text="@string/image_details_views_title" />
+
+                     <TextView
+                         android:id="@+id/views"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center_horizontal"
+                         android:textAppearance="?android:attr/textAppearanceLarge" />
+                     
+                 </LinearLayout>
+
+             </LinearLayout>
+             
+</RelativeLayout>
+
+         <LinearLayout
+             android:id="@+id/image_details_description"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@id/image_details_ratings"
+             android:layout_marginBottom="8dp"
+             android:orientation="vertical" >
+             
+             <TextView
+           android:id="@+id/description"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textAppearance="?android:attr/textAppearanceMedium"
+            />
+             
+         </LinearLayout>
+         
+         <RelativeLayout
+             android:id="@+id/image_details_titles"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@id/image_details_description" >
+
+       <TextView
+           android:id="@+id/camera"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/image_details_camera"
+           android:textColor="@color/GREY"
+           android:textAppearance="?android:attr/textAppearanceMedium"
+            />
+
+       <TextView
+           android:id="@+id/focal_length"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/camera"
+           android:textColor="@color/GREY"
+           android:textAppearance="?android:attr/textAppearanceMedium"
+           android:text="@string/image_details_focal_length" />
+       
+       <TextView
+           android:id="@+id/shutter_speed"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/focal_length"
+           android:textColor="@color/GREY"
+           android:textAppearance="?android:attr/textAppearanceMedium"
+           android:text="@string/image_details_shutter_speed" />
+       
+       <TextView
+           android:id="@+id/iso"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/shutter_speed"
+           android:textColor="@color/GREY"
+           android:textAppearance="?android:attr/textAppearanceMedium"
+           android:text="@string/image_details_iso" />
+  
+       <TextView
+           android:id="@+id/category"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/iso"
+           android:textColor="@color/GREY"
+           android:textAppearance="?android:attr/textAppearanceMedium"
+           android:text="@string/image_details_category" />
+       
+       <TextView
+           android:id="@+id/aperture"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/category"
+           android:textColor="@color/GREY"
+           android:textAppearance="?android:attr/textAppearanceMedium"
+           android:text="@string/image_details_aperture" />
+       
+       <TextView
+           android:id="@+id/uploaded"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/aperture"
+           android:textColor="@color/GREY"
+           android:textAppearance="?android:attr/textAppearanceMedium"
+           android:text="@string/image_details_uploaded" />
+       
+        <TextView
+            android:id="@+id/taken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/uploaded"
+            android:textColor="@color/GREY"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/image_details_taken" />
+       
+       <TextView
+           android:id="@+id/license"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/taken"
+           android:textColor="@color/GREY"
+           android:textAppearance="?android:attr/textAppearanceMedium"
+           android:text="@string/image_details_license" />
+       
+       <TextView
+           android:id="@+id/location"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/license"
+           android:textColor="@color/GREY"
+           android:textAppearance="?android:attr/textAppearanceMedium"
+           android:text="@string/image_details_location" />
+
+   </RelativeLayout>
+
+   <RelativeLayout
+       android:id="@+id/image_details_content"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/image_details_description"
+       android:layout_marginLeft="16dp"
+       android:layout_toRightOf="@id/image_details_titles" >
+       
+       <TextView
+           android:id="@+id/camera_content"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textAppearance="?android:attr/textAppearanceMedium" />
+       
+       <TextView
+           android:id="@+id/focal_length_content"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/camera_content"
+           android:textAppearance="?android:attr/textAppearanceMedium" />
+
+       <TextView
+           android:id="@+id/shutter_speed_content"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/focal_length_content"
+           android:textAppearance="?android:attr/textAppearanceMedium" />
+       
+       <TextView
+           android:id="@+id/iso_content"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/shutter_speed_content"
+           android:textAppearance="?android:attr/textAppearanceMedium" />
+       
+       <TextView
+           android:id="@+id/category_content"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/iso_content"
+           android:textAppearance="?android:attr/textAppearanceMedium" />
+      
+       <TextView
+           android:id="@+id/aperture_content"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/category_content"
+           android:textAppearance="?android:attr/textAppearanceMedium" />
+       
+       <TextView
+           android:id="@+id/uploaded_content"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/aperture_content"
+           android:textAppearance="?android:attr/textAppearanceMedium" />
+       
+       <TextView
+           android:id="@+id/taken_content"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/uploaded_content"
+           android:textAppearance="?android:attr/textAppearanceMedium" />
+       
+       <TextView
+           android:id="@+id/license_content"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/taken_content"
+           android:textAppearance="?android:attr/textAppearanceMedium" />
+       
+       <TextView
+           android:id="@+id/location_content"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/license_content"
+           android:textAppearance="?android:attr/textAppearanceMedium" />
+       
+   </RelativeLayout>
+   
+   <fragment
+       android:id="@+id/map"
+       android:name="com.orbar.MapPageFragment"
+       android:layout_width="match_parent"
+       android:layout_height="400dp"
+       android:layout_below="@id/image_details_content"
+       android:layout_marginTop="8dp"
+       class="com.google.android.gms.maps.MapFragment" />
+ 
+<ImageView
+    android:id="@+id/transparent_image"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:layout_alignBottom="@id/map"
+    android:layout_alignTop="@id/map"
+    android:src="@color/TRANS" />
+   
+     </RelativeLayout>
+ </ScrollView>
